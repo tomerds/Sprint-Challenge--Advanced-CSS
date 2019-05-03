@@ -23,9 +23,76 @@
   }
 }
 .btn:hover {
-  background-color: #F6F6F6;
+  background-color: white;
   color: #22283A;
   border: solid 1px #22283A;
+  transition: 0.5s;
+}
+.blast,
+.sky,
+.launch {
+  -webkit-animation: from-right 2s linear;
+  -moz-animation: from-right 2s linear;
+  animation: from-right 2s linear;
+}
+@-moz-keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hdrimg {
+  -webkit-animation: from-left 2s linear;
+  -moz-animation: from-left 2s linear;
+  animation: from-left 2s linear;
+}
+@-moz-keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -328,4 +395,38 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+}
+.signup h1 {
+  font-size: 2rem;
+}
+.signup h2 {
+  font-size: 1.6rem;
+}
+.signup .detailform {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+}
+.signup .clearfix {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.signup .clearfix .cancelbtn {
+  width: 40%;
+  background-color: rgba(246, 246, 246, 0.9);
+}
+.signup .clearfix .signupbtn {
+  width: 40%;
+  background-color: aquamarine;
 }

@@ -25,7 +25,42 @@
 }
 
 .btn:hover {
-    background-color: @wild-sand;
+    background-color: white;
     color: @btn-bg-color;
     border: solid 1px @btn-bg-color;
+    transition: 0.5s;
+}
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
+.blast, .sky, .launch{
+	
+	.keyframes(from-right;{
+		0% { opacity: 0; transform: translateX(400px)}
+		100% { opacity: 1; }
+		});
+
+	.animation(from-right 2s linear )
+
+}
+
+.hdrimg {
+	
+	.keyframes(from-left;{
+		0% { opacity: 0; transform: translateX(-400px)}
+		100% { opacity: 1; }
+		});
+
+	.animation(from-left 2s linear )
+
 }
