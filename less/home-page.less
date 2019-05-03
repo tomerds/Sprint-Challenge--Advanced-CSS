@@ -14,16 +14,41 @@
   
   }
 
+  .hdrimg {
+    border-radius: 5px;
+
+    @media @phone {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    @media @phone {
+      .sky, .launch{
+        display: none;
+      }
+      
+      flex-wrap: none;
+      justify-content: center;
+      align-items: center;
+      
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @phone {
+        width: 90%;
+        margin: 20px 0;
+      }
     }
   }
 
@@ -46,8 +71,20 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      margin-top: 30px;
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 100%;
+      padding: 20px 0 ;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 90%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -64,6 +101,12 @@
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        width: 90%;
+        margin: 0;
+        padding-bottom: 20px;
+      }
       
       img {
         width: 100%;
